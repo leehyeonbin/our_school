@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/page_main"
+        android:enabled="true"
+        android:icon="@drawable/ic_home"
+        android:title="홈"/>
+    <item
+        android:id="@+id/page_school_meals"
+        android:enabled="true"
+        android:icon="@drawable/ic_meals"
+        android:title="급식"/>
+    <item
+        android:id="@+id/page_calender"
+        android:enabled="true"
+        android:icon="@drawable/ic_calendar"
+        android:title="일정"/>
+</menu>
