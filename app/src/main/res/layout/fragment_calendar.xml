@@ -102,6 +102,7 @@
             app:spanCount="7"
             android:adjustViewBounds="true"
             app:layout_constrainedHeight="true"
+            tools:listitem="@layout/list_item_calendar"
             />
     </LinearLayout>
 
