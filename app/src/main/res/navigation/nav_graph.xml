@@ -18,14 +18,14 @@
         android:id="@+id/calendarFragment"
         android:name="com.example.ourschool.view.fragment.CalendarFragment"
         android:label="fragment_calendar"
-        tools:layout="@layout/fragment_calendar" >
-        <action
-            android:id="@+id/action_calendarFragment_to_mealsFragment"
-            app:destination="@id/mealsFragment" />
-    </fragment>
+        tools:layout="@layout/fragment_calendar" />
     <fragment
         android:id="@+id/mealsFragment"
         android:name="com.example.ourschool.view.fragment.MealsFragment"
         android:label="fragment_meals"
-        tools:layout="@layout/fragment_meals" />
+        tools:layout="@layout/fragment_meals" >
+        <action
+            android:id="@+id/action_mealsFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
 </navigation>

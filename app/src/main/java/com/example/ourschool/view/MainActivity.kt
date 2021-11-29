@@ -9,6 +9,8 @@ import androidx.navigation.ui.NavigationUI
 import com.example.ourschool.R
 import com.example.ourschool.databinding.ActivityMainBinding
 import com.example.ourschool.viewmodel.MainViewModel
+import java.time.LocalDateTime
+import java.time.format.DateTimeFormatter
 
 class MainActivity : AppCompatActivity() {
 
@@ -20,7 +22,8 @@ class MainActivity : AppCompatActivity() {
         mBinding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(mBinding.root)
 
-        viewModel.getMeals()
+        val date :String = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyyMMdd"))
+        viewModel.getMeals(date)
 
         val navHostFragment = supportFragmentManager.findFragmentById(R.id.fragment_view) as NavHostFragment
         val navController = navHostFragment.navController
