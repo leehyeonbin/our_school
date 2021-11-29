@@ -1,19 +1,108 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="#3F51B5"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/calendar_fragment"
-    tools:context="com.example.ourschool.view.fragment.CalendarFragment">
+    tools:context="com.example.ourschool.view.fragment.CalendarFragment"
+    android:orientation="vertical"
+    android:padding="8dp">
 
     <TextView
-        android:id="@+id/calendar_center_tv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:text="일정프라그먼트"
-        android:textSize="50sp"
-        android:textStyle="bold"/>
+        android:id="@+id/calendar_year_month_tv"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="2021년 12월"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:gravity="center_vertical|start"
+        android:layout_marginStart="20dp"
+        android:textColor="#333333"
+        />
 
-</RelativeLayout>
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#000000" />
+
+    <LinearLayout
+        android:id="@+id/calendar_head"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="SUN"
+            android:textColor="#333333"
+            android:gravity="center_horizontal"/>
+
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="MON"
+            android:textColor="#333333"
+            android:gravity="center_horizontal"/>
+
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="TUE"
+            android:textColor="#333333"
+            android:gravity="center_horizontal"/>
+
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="WED"
+            android:textColor="#333333"
+            android:gravity="center_horizontal"/>
+
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="THU"
+            android:textColor="#333333"
+            android:gravity="center_horizontal"/>
+
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="FRI"
+            android:textColor="#333333"
+            android:gravity="center_horizontal"/>
+
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="SAT"
+            android:textColor="#333333"
+            android:gravity="center_horizontal"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/calendar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/calendar_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:spanCount="7"
+            android:adjustViewBounds="true"
+            app:layout_constrainedHeight="true"
+            />
+    </LinearLayout>
+
+</LinearLayout>
